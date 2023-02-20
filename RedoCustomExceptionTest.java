@@ -4,16 +4,16 @@ public class RedoCustomExceptionTest {
         System.out.println("The Player's name is " +footballGame.nameOfThePlayer+ " and his is in " + footballGame.nameOfTheTournament);
 
         try {
-            footballGame.playerFitness(90f);
+            footballGame.playerFitness(30f);
         }
         catch (CannotStayOnTheBenchException x){
-            System.out.println("Player should be at their best: " );
+            System.out.println("Player should be at their best: " +x);
         }
         catch (PlayerOutForTwoWeeksException x){
-            System.out.println("Player cannot return to Squad for at least two weeks ");
+            System.out.println("Player cannot return to Squad for at least two weeks " +x);
         }
         catch (PlayerOutForAMonthException x){
-            System.out.println("Player should be fit and can return to squad after a month ");
+            System.out.println("Player should be fit and can return to squad after a month " +x);
         }
 
     }
